@@ -31,18 +31,19 @@
                 <div class="col">
                     <h4>Export method</h4>
                     <div class="input-group">
-                        <input id="gender-male" type="radio" name="role" value="male" />
+                        <input id="gender-male" type="radio" name="method" value="Json" />
                         <label for="gender-male">Json</label>
-                        <input id="gender-female" type="radio" name="role" value="female" />
+                        <input id="gender-female" type="radio" name="method" value="Csv" />
                         <label for="gender-female">Csv</label>
                     </div>
                 </div>
                 <div class="row">
-                    <input type="submit" value="Sign up admin" class="payment-method-card submit" id="sign">
+                    <input type="submit" value="Sign up admin" class="payment-method-card submit" name="sign">
                 </div>
         </form>
     </div>
-
+    <br>
+    
     <!-- CDN -->
 
     <!-- JQuery -->

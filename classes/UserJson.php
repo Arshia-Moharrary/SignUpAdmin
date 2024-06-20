@@ -4,8 +4,8 @@ class UserJson extends User {
     private $format = "json";
     private $folderName = "Json";
 
-    public function add($fullName, $email, $password, $role) {
-        $valid = $this->validation($fullName, $email, $password, $role, $this->format);
+    public function add($fullName, $email, $password, $method) {
+        $valid = $this->validation($fullName, $email, $password, $method, $this->format);
 
         if ($valid) {
             $folderName = "Users/{$this->folderName}";
@@ -14,10 +14,14 @@ class UserJson extends User {
                 "fullName" => $fullName,
                 "email" => $email,
                 "password" => $password,
-                "role" => $role
+                "method" => $method
             ];
 
-            file_put_contents($fullFileName, json_encode($data));
+            if (file_put_contents(BASE_DIRECTORY . "/classes/" . $fullFileName, json_encode($data))) {
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 }

@@ -5,12 +5,12 @@ abstract class User {
     protected $fullName;
     protected $email;
     protected $password;
-    protected $role;
+    protected $method;
 
     // Methods
-    protected function validation($fullName, $email, $password, $role, $format) {
+    protected function validation($fullName, $email, $password, $method, $format) {
         // This validation is simple
-        if (empty($fullName) || empty($email) || empty($password) || empty($role)) {
+        if (empty($fullName) || empty($email) || empty($password) || empty($method)) {
             return false;
         }
 
@@ -22,5 +22,5 @@ abstract class User {
         return true;
     }
 
-    public abstract function add($fullName, $email, $password, $role);
+    public abstract function add($fullName, $email, $password, $method);
 }
