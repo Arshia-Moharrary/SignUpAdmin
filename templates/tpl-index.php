@@ -28,27 +28,13 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-half">
-                    <h4>Date of Birth</h4>
+                <div class="col">
+                    <h4>Export method</h4>
                     <div class="input-group">
-                        <div class="col-third">
-                            <input type="text" placeholder="DD" name="dayBD" />
-                        </div>
-                        <div class="col-third">
-                            <input type="text" placeholder="MM" name="monthBD" />
-                        </div>
-                        <div class="col-third">
-                            <input type="text" placeholder="YYYY" name="yearBD" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-half">
-                    <h4>Gender</h4>
-                    <div class="input-group">
-                        <input id="gender-male" type="radio" name="gender" value="male" />
-                        <label for="gender-male">Male</label>
-                        <input id="gender-female" type="radio" name="gender" value="female" />
-                        <label for="gender-female">Female</label>
+                        <input id="gender-male" type="radio" name="role" value="male" />
+                        <label for="gender-male">Json</label>
+                        <input id="gender-female" type="radio" name="role" value="female" />
+                        <label for="gender-female">Csv</label>
                     </div>
                 </div>
                 <div class="row">
